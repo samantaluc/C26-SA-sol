@@ -6,7 +6,7 @@ const Body = Matter.Body;
 let engine;
 let world;
 
-var ground;
+//var ground;
 
 var top_wall;
 var ball;
@@ -33,7 +33,7 @@ function setup() {
   
   
 
-  ground =new Ground(200,390,400,20);
+  //ground =new Ground(200,390,400,20);
 
 
   ball = Bodies.circle(100,200,20,ball_options);
@@ -64,7 +64,7 @@ function draw()
   
 
   ellipse(ball.position.x,ball.position.y,20);
-  ground.show();
+ // ground.show();
   strokeWeight(2);
   stroke(255);
   line(con.pointA.x,con.pointA.y,ball.position.x,ball.position.y);
@@ -75,4 +75,4 @@ function draw()
 function vForce()
 {
   Matter.Body.applyForce(ball,{x:0,y:0},{x:0.05,y:0});}
-  
+ 
